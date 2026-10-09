@@ -28,6 +28,12 @@ export const CONFIG = {
   avisoProtesis:
     'Además de la cirugía ($700.000), las prótesis tienen un costo de USD 100 cada una.',
 
+  // Se muestra cuando recaudado >= objetivo.
+  metaCumplida: {
+    titulo: '🎉 ¡Llegamos a la meta de la cirugía!',
+    texto: 'Gracias a todos. Lo que sigamos juntando va para las prótesis y los demás gastos de Lolo.',
+  },
+
   totalNumeros: 200,
   maxPorPedido: 20,
   refrescoMs: 60_000,

@@ -5,6 +5,8 @@ export default function Progress({ resumen, ahora }) {
   const { recaudado, objetivo, disponibles, vendidos, reservados, ultima_reserva } = resumen
   const pct = objetivo > 0 ? Math.round((recaudado / objetivo) * 100) : 0
   const ancho = Math.min(100, Math.max(pct, recaudado > 0 ? 2 : 0))
+  const metaCumplida = objetivo > 0 && recaudado >= objetivo
+  const excedente = recaudado - objetivo
 
   return (
     <section className="seccion progreso" aria-labelledby="progreso-titulo">
@@ -25,9 +27,21 @@ export default function Progress({ resumen, ahora }) {
           >
             <div className="barra__relleno" style={{ width: `${ancho}%` }} />
           </div>
-          <p className="progreso__pct">
-            <strong>{pct}%</strong> de la meta para la cirugía
-          </p>
+          {metaCumplida ? (
+            <div className="progreso__meta-cumplida">
+              <p className="progreso__meta-titulo">{CONFIG.metaCumplida.titulo}</p>
+              {excedente > 0 && (
+                <p className="progreso__pct">
+                  Superamos la meta por <strong>{formatoPesos(excedente)}</strong>
+                </p>
+              )}
+              <p className="progreso__meta-texto">{CONFIG.metaCumplida.texto}</p>
+            </div>
+          ) : (
+            <p className="progreso__pct">
+              <strong>{pct}%</strong> de la meta para la cirugía
+            </p>
+          )}
 
           <ul className="contadores">
             <li className="contador contador--destacado">

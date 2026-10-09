@@ -457,6 +457,18 @@ a {
 .progreso__pct strong {
   color: var(--rosa-osc);
 }
+.progreso__meta-cumplida {
+  margin-top: 0.75rem;
+}
+.progreso__meta-titulo {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--rosa-osc);
+}
+.progreso__meta-texto {
+  margin-top: 0.35rem;
+  color: var(--tinta-suave);
+}
 .contadores {
   list-style: none;
   padding: 0;
