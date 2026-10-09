@@ -8,7 +8,7 @@ const CLAVES_NUMERICAS = [
   'precio_numero', 'precio_par',
 ]
 const CLAVES_TEXTO = [
-  'alias', 'titular', 'fecha_sorteo', 'loteria', 'texto_legal',
+  'alias', 'titular', 'fecha_sorteo', 'loteria', 'texto_legal', 'aviso',
 ]
 
 /** "153000", "153.000", "$153.000" → 153000. Vacío o sin dígitos → null. */

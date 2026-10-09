@@ -68,5 +68,8 @@ export const CONFIG = {
     loteria: 'A confirmar',
     estado_rifa: 'activa',
     texto_legal: '',
+    // Aviso destacado arriba de la historia. La clave "aviso" del Sheet lo pisa.
+    // Para que no se muestre, dejalo en '' acá y vacío en el Sheet.
+    aviso: '¡Ya tenemos fecha para la cirugía! Lolo se opera el miércoles 14/10.',
   },
 }

@@ -88,6 +88,15 @@ export default function App() {
       <Hero />
 
       <main>
+        {resumen.aviso && (
+          <div className="contenedor">
+            <p className="aviso-destacado tarjeta" role="note">
+              <span className="aviso-destacado__icono" aria-hidden="true">🗓️</span>
+              <span>{resumen.aviso}</span>
+            </p>
+          </div>
+        )}
+
         <Story />
 
         {datos ? (

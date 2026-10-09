@@ -101,6 +101,10 @@ describe('parsearResumen', () => {
     expect(r.estado_rifa).toBe('activa')
     expect(r.objetivo).toBe(700000)
   })
+  it('aviso del Sheet pisa al default; vacío usa el default', () => {
+    expect(parsearResumen('clave,valor\naviso,  Cirugía reprogramada  \n').aviso).toBe('Cirugía reprogramada')
+    expect(parsearResumen('clave,valor\naviso,\n', { aviso: 'default' }).aviso).toBe('default')
+  })
 })
 
 describe('conAntiCache', () => {
